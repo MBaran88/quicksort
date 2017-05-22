@@ -1,30 +1,16 @@
 package com.quicksort;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-	class Person{
-        public int getAge() {
-            return age;
-        }
+        Person Person1 = new Person(11,"Cooper");
+        Person Person2 = new Person(28,"Davis");
+        Person Person3 = new Person(44,"White");
+        Person Person4 = new Person(35,"Kowalsky");
 
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-        private int age;
-
-        public String getSurname() {
-            return surname;
-        }
-
-        public void setSurname(String surname) {
-            this.surname = surname;
-        }
-
-        private String surname;
-
-
-    }
+        System.out.println();
     }
 }
