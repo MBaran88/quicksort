@@ -6,26 +6,32 @@ package com.quicksort;
 public class Person implements Comparable<Person> {
     private int age;
     private String surname;
+    private String name;
 
-    public Person(int age, String surname){
+    public Person(int age, String surname, String name) {
         this.age = new age;
         this.surname = new surname;
+        this.name = new name;
     }
-    public int getAge(){
+
+    public int getAge() {
         return this.age;
     }
-    public String getSurname(){
+
+    public String getSurname() {
         return this.surname;
     }
+    public String getName(){
+        return this.name;
+    }
+
     @Override
     public int compareTo(Person SecondPerson) {
-        if (this.getAge() > SecondPerson.getAge()){
+        if (this.getAge() > SecondPerson.getAge()) {
             return 1;
-        }
-        else if (this.getAge() < SecondPerson.getAge()){
+        } else if (this.getAge() < SecondPerson.getAge()) {
             return -1;
-        }
-        else {
+        } else {
             return this.getSurname().compareTo(SecondPerson.getSurname());
         }
     }
@@ -61,8 +67,6 @@ public class Person implements Comparable<Person> {
 
     public Person() {
     }*/
-
-
 
 
 }
