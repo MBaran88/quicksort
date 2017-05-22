@@ -3,8 +3,33 @@ package com.quicksort;
 /**
  * Created by RENT on 2017-05-22.
  */
-public class Person {
-    public Person (int age, String surname){
+public class Person implements Comparable<Person> {
+    private int age;
+    private String surname;
+
+    public Person(int age, String surname){
+        this.age = new age;
+        this.surname = new surname;
+    }
+    public int getAge(){
+        return this.age;
+    }
+    public String getSurname(){
+        return this.surname;
+    }
+    @Override
+    public int compareTo(Person SecondPerson) {
+        if (this.getAge() > SecondPerson.getAge()){
+            return 1;
+        }
+        else if (this.getAge() < SecondPerson.getAge()){
+            return -1;
+        }
+        else {
+            return this.getSurname().compareTo(SecondPerson.getSurname());
+        }
+    }
+    /*public Person (int age, String surname){
         this.age = setAge();
         this.surname = setSurname();
     }
@@ -35,7 +60,7 @@ public class Person {
     private String surname;
 
     public Person() {
-    }
+    }*/
 
 
 
